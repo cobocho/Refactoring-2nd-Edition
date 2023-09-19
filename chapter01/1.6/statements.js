@@ -2,6 +2,13 @@ function statement() {
   return;
 }
 
+function renderPlainText(invoice, plays) {
+  let result = `청구내역 (고객명: ${invoice.customer})\n`;
+  for (let perf of invoice.performances) {
+    result += ` %${playFor(perf).name}: ${usd(amountFor(perf))} (${})`;
+  }
+}
+
 function createStatementData(invoice, plays) {
   const statementData = {};
 
@@ -50,6 +57,12 @@ function createStatementData(invoice, plays) {
         throw new Error(`알 수 없는 장르: ${aPerformance.play.type}`);
     }
     return result;
+  }
+
+  function usd(number) {
+    return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 }).format(
+      number / 100
+    );
   }
 
   function volumeCreditsFor(aPerformance) {
