@@ -1,0 +1,30 @@
+{
+  "name": "refactoring-2nd-edition",
+  "version": "1.0.0",
+  "description": "refactoring-2nd-edition study",
+  "main": "index.js",
+  "scripts": {
+    "dev-1": "ts-node 01-extract-function.ts",
+    "dev-2": "ts-node 02-Inline-function.ts",
+    "dev-3": "ts-node 03-extract-variable.ts",
+    "dev-5": "ts-node 05-change-function-declaration.ts",
+    "dev-8": "ts-node 08-introduce-parameter-object.ts",
+    "dev-9": "ts-node 09-combine-functions-into-class.ts",
+    "dev-10": "ts-node 10-combine-functions-into-transform.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cobocho/Refactoring-2nd-Edition.git"
+  },
+  "author": "Martin Fowler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cobocho/Refactoring-2nd-Edition/issues"
+  },
+  "homepage": "https://github.com/cobocho/Refactoring-2nd-Edition#readme",
+  "dependencies": {
+    "@types/lodash": "^4.14.198",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
